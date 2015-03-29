@@ -11,22 +11,15 @@ html, body{
 /* Other colors: http://www.w3schools.com/tags/ref_colorpicker.asp */
 
 /* Palleton: http://paletton.com/#uid=13C0u0kllllac5Zb168vEICxsJ4 */
-
-
-#welcome h2 {
-
-	display: inline-block;
-
+nav{
+	color: white;
+	border: 2px solid white;
+	width: 100%;
+	text-align: center;
+	background-color: #2B4A6F;
+	opacity: 0.8;
 }
-#welcome ul li{
 
-	display:inline-block;
-	margin-left: 15px;
-	size: 6px;
-
-
-
-}
 
 
 /*may use lauch js to create a launch pad have to check it out later today*/
