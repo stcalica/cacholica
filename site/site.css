@@ -5,23 +5,47 @@ html, body{
 
 }
 
-	/*may use lauch js to create a launch pad have to check it out later today*/
+
+/* UC Davis colors: http://marketingtoolbox.ucdavis.edu/identity-guide/color.html */
+
+/* Other colors: http://www.w3schools.com/tags/ref_colorpicker.asp */
+
+/* Palleton: http://paletton.com/#uid=13C0u0kllllac5Zb168vEICxsJ4 */
+
+
+#welcome h2 {
+
+	display: inline-block;
+
+}
+#welcome ul li{
+
+	display:inline-block;
+	margin-left: 15px;
+	size: 6px;
+
+
+
+}
+
+
+/*may use lauch js to create a launch pad have to check it out later today*/
 #splash{
 
 	width: 100%;
 	height: 80%;
 	margin:0.5px;
 	padding:1px;
-	border: 2px solid black;
+	border: 2px solid white;
 }
 
 #welcome {
 	
 	color: white;
-	border: 2px solid black;
+	border: 2px solid white;
 	width: 100%;
 	text-align: center;
-	background-color: red;
+	background-color: #2B4A6F;
 	opacity: 0.76;
 
 
@@ -37,6 +61,7 @@ html, body{
 	top:160px;
 	background: black;
 	color:white;
+	opacity: 0.5;
 
 }
 /* A must for using particles! Also particles themselves are white in color may change later*/
@@ -49,8 +74,9 @@ html, body{
 }
 .picnic
 {
-
-	height:500px;
+	margin:5px;ß
+	border: 5px solid #C99700;
+	height:100%;
 	width:100%;
 
 }
@@ -60,11 +86,11 @@ html, body{
 {
 
 	width:100%;
-	border: 2px solid white; 
+	border: 2px solid  #C99700; 
 	text-align:center;
 	position:relative;
 	top:160px;
-	background: blue;
+	background: #002855;
 	color:white;
 
 }

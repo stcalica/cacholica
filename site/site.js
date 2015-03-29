@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	
 
+
+
+	var ratio = Math.sqrt($(window).width() * $(window).height()) / 1120.0;
 	$("#splash").css("background", "center no-repeat url('./test.jpg')");
 	$("#splash").stellar();
 	$(".particles-post").stellar();
@@ -8,23 +11,23 @@ $(document).ready(function(){
 	particlesJS('particles-js', {
 	  particles: {
 		color: '#fff',
-		color_random: true,
-		shape: 'triangles', // "circle", "edge" or "triangle"
+		color_random: false,
+		shape: 'triangle', // "circle", "edge" or "triangle"
 		opacity: {
 		  opacity: 1,
 		  anim: {
 			enable: true,
-			speed: 3,
+			speed: Math.sqrt(ratio * 3),
 			opacity_min: 0,
 			sync: false
 		  }
 		},
-		size: 4,
+		size: Math.floor(ratio * 3),
 		size_random: true,
-		nb: 150,
+		nb:  Math.floor(ratio * 150),
 		line_linked: {
 		  enable_auto: true,
-		  distance: 100,
+		  distance: Math.floor(ratio * 100),
 		  color: '#fff',
 		  opacity: 1,
 		  width: 1,
@@ -42,8 +45,8 @@ $(document).ready(function(){
 	  interactivity: {
 		enable: true,
 		mouse: {
-		  distance: 300
-		},
+		  distance:  Math.floor(ratio * 150),
+		 },
 		detect_on: 'window', // "canvas" or "window"
 		mode: 'grab', // "grab" of false
 		line_linked: {
@@ -53,7 +56,7 @@ $(document).ready(function(){
 		  onclick: {
 			enable: true,
 			mode: 'push', // "push" or "remove"
-			nb: 4
+			nb:  Math.floor(ratio * 3)
 		  },
 		  onresize: {
 			enable: true,
