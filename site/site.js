@@ -1,8 +1,5 @@
 $(document).ready(function(){
 	
-
-
-
 	var ratio = Math.sqrt($(window).width() * $(window).height()) / 1120.0;
 	$("#splash").css("background", "center no-repeat url('./test.jpg')");
 	$("#splash").stellar();
@@ -70,6 +67,5 @@ $(document).ready(function(){
 	  retina_detect: true
 	});
 	
-	
-	
+
 });
