@@ -1,0 +1,57 @@
+.header {
+  width: 100%; }
+  .header .jumbotron {
+    width: 100%; }
+    .header .jumbotron h2 {
+      text-align: center; }
+
+body {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #3A90A8;
+  background: url("backgroundflowers.jpg");
+  font-family: 'Oswald', sans-serif; }
+  body .content {
+    width: 100%;
+    height: 100%; }
+    body .content canvas {
+      border: 1px solid black; }
+    body .content .socialWall {
+      border: 1px solid black;
+      border-radius: 25px; }
+  body .post {
+    margin: 5px;
+    background-color: #D9E1E1;
+    border-radius: 25px; }
+    body .post p {
+      text-align: left; }
+    body .post h2 {
+      text-align: center; }
+  body .projects li {
+    display: inline-block;
+    margin: 10px;
+    text-align: center; }
+
+html {
+  height: 100%; }
+
+.break {
+  width: 100%;
+  height: 20px; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+footer {
+  clear: both;
+  margin: 0px;
+  background-color: #909C9B;
+  bottom: 0;
+  margin-top: 15px;
+  padding: 3px; }
+  footer li {
+    list-style-type: none; }
+
+/*# sourceMappingURL=main.css.map */
