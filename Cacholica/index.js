@@ -27,19 +27,18 @@ $(document).ready(function(){
 		}
 
     function addImage(){
-      var canvas = $("#socialWall");
-      var ctx = canvas.get(0).getContext('2d');
       fabric.Image.fromURL("./backgroundflowers.jpg", function(img){
-          //  var pattern = ctx.createPattern(img, "repeat");
+            // var pattern = ctx.createPattern(img, "repeat");
             //ctx.fillStyle = pattern;
-            canvas.add(img);
+            c.add(img);
        });
 
 		}
 
     function drawOnImage(){
-
-
+        var fabricCanvas = new fabric.Canvas("socialWall", {
+            isDrawingMode: true
+        });
 
     }
 
@@ -51,7 +50,7 @@ $(document).ready(function(){
 		//Initial call
 		respondCanvas();
     addImage();
-    //drawOnImage();
+    drawOnImage();
     //shareImage() should be attached to a button with an onclick listner
 
 
