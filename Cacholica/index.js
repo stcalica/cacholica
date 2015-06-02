@@ -16,14 +16,14 @@ $(document).ready(function(){
   			var x = c.width();
   			var y = c.height();  			
   			
-  	//		ct.fillStyle = "#DDDDDD"; //black
-  	//		ct.fillRect( 0, 0, x, y); //fill the canvas
+  			ct.fillStyle = "#DDDDDD"; //black
+  			ct.fillRect( 0, 0, x, y); //fill the canvas
 
-  			//ct.font = "20px Calibri";
-  			//var resizeText = "Canvas width: "+c.width()+"px";
-  			//ct.textAlign = "center";
-  			//ct.fillStyle = "#333333"; //white
-	  	  //ct.fillText(resizeText, (x/2), (y/2) );
+  			ct.font = "20px Calibri";
+  			var resizeText = "Canvas width: "+c.width()+"px";
+  		  ct.textAlign = "center";
+  			ct.fillStyle = "#333333"; //white
+	  	  ct.fillText(resizeText, (x/2), (y/2) );
 		}
 
     function addImage(){
@@ -36,9 +36,9 @@ $(document).ready(function(){
 		}
 
     function drawOnImage(){
-        var fabricCanvas = new fabric.Canvas("socialWall", {
-            isDrawingMode: true
-        });
+    //    var fabricCanvas = new fabric.Canvas("socialWall", {
+     //       isDrawingMode: true
+      //  });
 
     }
 
