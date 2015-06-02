@@ -7,7 +7,9 @@ body{
 	//background
 	background-color: $mainColor;
 	background: url("backgroundflowers.jpg");
+	background-position: center;
 	font-family: 'Oswald', sans-serif;
+	background-attachment: fixed;
 	.container{
 	
 	}
@@ -30,6 +32,7 @@ body{
 		margin:5px;
 		background-color: $secColor;
 		border-radius: 25px;
+		min-height: 300px;
 		//watercolor faded background
 		//fonts 
 		p{
