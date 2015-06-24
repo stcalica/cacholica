@@ -1,13 +1,32 @@
 <html> 
 	<head> 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="visualizations, data, touchdesigner, tutorials, engineers, artists" />
+	<meta name="keywords" content="visualizations, data, touchdesigner, tutorials, engineers, artists" />
 	<link  rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 	<link  rel="stylesheet" type="text/css" href="main.css" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
-
 	</head> 
 	<body>
+	<div id="fb-root"></div>
+	<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '373013199568013',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 	<div class="container">
 		<div class="header">
 			<nav class="navbar navbar-default navbar-fixed-top">
@@ -60,9 +79,7 @@
 		
 	</div>
 
-
-
-
+	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
 	</body> 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script> 
 	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
