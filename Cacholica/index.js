@@ -36,9 +36,10 @@ $(document).ready(function(){
 		}
 
     function drawOnImage(){
-    //    var fabricCanvas = new fabric.Canvas("socialWall", {
-     //       isDrawingMode: true
-      //  });
+       /* var fabricCanvas = new fabric.Canvas("socialWall", {
+           isDrawingMode: true
+        });*/
+		respondCanvas();
 
     }
 
@@ -48,7 +49,7 @@ $(document).ready(function(){
 
     }
 		//Initial call
-		respondCanvas();
+	respondCanvas();
     addImage();
     drawOnImage();
     //shareImage() should be attached to a button with an onclick listner
