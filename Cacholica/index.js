@@ -5,7 +5,7 @@ $(document).ready(function(){
 		    hoverCursor: 'pointer',
             isDrawingMode: true
        });
-  		
+
   		//Run function when browser  resize
 		respondCanvas();
 		addImage();
@@ -30,19 +30,19 @@ $(document).ready(function(){
         });
 			
 			
-/*				//Redraw & reposition content
-		var x = c.width();
-  			var y = c.height();  			
-  			
+				//Redraw & reposition content
+		var x = c.getWidth();
+  		var y = c.getHeight();  			
+  		var ct = c.getContext();
   			ct.fillStyle = "#DDDDDD"; //black
   			ct.fillRect( 0, 0, x, y); //fill the canvas
 
   			ct.font = "20px Calibri";
-  			var resizeText = "Canvas width: "+c.width()+"px";
+  			var resizeText = "Canvas width: "+c.getWidth()+"px";
   		  ct.textAlign = "center";
   			ct.fillStyle = "#333333"; //white
 	  	  ct.fillText(resizeText, (x/2), (y/2) );
-*/
+
 		}
 
     function addImage(){
@@ -67,10 +67,6 @@ $(document).ready(function(){
 
 
     }
-		//Initial call
-	respondCanvas();
-    addImage();
-    drawOnImage();
 
 
 });
