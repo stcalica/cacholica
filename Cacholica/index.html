@@ -26,6 +26,10 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
+	   
+	   
+
+
     </script>
 	<div class="container">
 		<div class="header">
@@ -68,6 +72,9 @@
 				<!-- will set to height and width of canvas in javascript-->
 				<canvas  width="1000" height="1000" id="socialWall" >
 				</canvas> 
+				<button type="button" id="shareButton"">Share</button>
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+				</fb:login-button>
 			</div>
 
 

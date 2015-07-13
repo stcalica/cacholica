@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  		
+  	
   		//Get the canvas & context
 		var c = new fabric.Canvas("socialWall", {
 		    hoverCursor: 'pointer',
@@ -16,6 +16,7 @@ $(document).ready(function(){
 	//	$(window).resize( resizeImage ); //meed to resize and center image each time 
 	//need to make sure to get target sizes
 	  	
+		
 	  	function respondCanvas(){
   			//c.attr('width', $(container).width() ); //max width
   			//c.attr('height', $(container).height() ); //max height
@@ -60,7 +61,7 @@ $(document).ready(function(){
 				//get images centered
        });
 
-		}
+	}
 
     function drawOnImage(){
 
@@ -69,16 +70,21 @@ $(document).ready(function(){
 
     }
 	
-
-    function shareImage(){
+	$("#shareButton").click(function(){
+		shareCanvas();
+	});
+    function shareCanvas(){
 		//facebook set up
-		
-		
 		//get canvas image 
 		var data = c.toDataURL("image/png"); //change to image/png
-		var encode = data.substring(data.indexOf(',') + 1, data.length); //encode it
-		var decode = Base64Binary.decode(endcode); //decode it 
+		//var encode = data.substring(data.indexOf(',') + 1, data.length); //encode it
+		//var decode = btoa(encode); //decode it 
+
 		//share on facebook 
+		
+
+		
+		
 	// resource : https://coderwall.com/p/4qpmfw/sharing-html5-canvas-images-to-directly-to-facebook
 	//http://pupunzi.open-lab.com/2013/10/30/create-images-and-make-them-travel-the-world-using-html5-svg-canvas-and-javascript/
     }
