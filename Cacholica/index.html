@@ -11,6 +11,7 @@
 	<body>
 	<div id="fb-root"></div>
 	<script>
+	var accessToken;
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '373013199568013',
@@ -27,8 +28,75 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
 	   
-	   
+	   function publishOnFacebook(x) {
+			
+			 FB.login(function(response) {
+			if (response.authResponse) {
+			 access_token =   FB.getAuthResponse()['accessToken'];
+			 console.log('Access Token = '+ access_token);
+			 FB.api('/me', function(response) { });
+			 try {
+				blob = dataURItoBlob(x);
+				} catch (e) {
+					console.log(e);
+				}
+			var fd = new FormData();
+			fd.append("access_token",   access_token       );
+			fd.append("source", blob);
+			fd.append("message", "Photo Text");
+			try {
+				$.ajax({
+					url: "https://graph.facebook.com/me/photos?access_token=" + access_token  ,
+					type: "POST",
+					data: fd,
+					processData: false,
+					contentType: false,
+					cache: false,
+					success: function (data) {
+						console.log("success " + data);
+						$("#poster").html("Posted Canvas Successfully");
+					},
+					error: function (shr, status, data) {
+						console.log("error " + data + " Status " + shr.status);
+					},
+					complete: function () {
+						console.log("API call completed");
+					}
+				});
 
+			} catch (e) {
+				console.log(e);
+			}
+			} else {
+			 console.log('User cancelled login or did not fully authorize.');
+			}
+			}, {scope: ''});
+	}
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+		
+			   	   
+			
+		
+		
+		
+		function dataURItoBlob(dataURI) {
+			var byteString = atob(dataURI.split(',')[1]);
+			var ab = new ArrayBuffer(byteString.length);
+			var ia = new Uint8Array(ab);
+			for (var i = 0; i < byteString.length; i++) {
+				ia[i] = byteString.charCodeAt(i);
+			}
+			return new Blob([ab], {
+				type: 'image/png'
+			});
+}
 
     </script>
 	<div class="container">

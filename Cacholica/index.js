@@ -79,9 +79,8 @@ $(document).ready(function(){
 		var data = c.toDataURL("image/png"); //change to image/png
 		//var encode = data.substring(data.indexOf(',') + 1, data.length); //encode it
 		//var decode = btoa(encode); //decode it 
-
 		//share on facebook 
-		
+		publishOnFacebook(data);
 
 		
 		
