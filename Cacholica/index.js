@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  	
+
   		//Get the canvas & context
 		var c = new fabric.Canvas("socialWall", {
 		    hoverCursor: 'pointer',
@@ -70,23 +70,14 @@ $(document).ready(function(){
 
     }
 	
-	$("#shareButton").click(function(){
-		shareCanvas();
-	});
-    function shareCanvas(){
-		//facebook set up
-		//get canvas image 
+	$("#shareBtn").click(function(){
+		
 		var data = c.toDataURL("image/png"); //change to image/png
-		//var encode = data.substring(data.indexOf(',') + 1, data.length); //encode it
-		//var decode = btoa(encode); //decode it 
-		//share on facebook 
-		publishOnFacebook(data);
-
-		
-		
-	// resource : https://coderwall.com/p/4qpmfw/sharing-html5-canvas-images-to-directly-to-facebook
-	//http://pupunzi.open-lab.com/2013/10/30/create-images-and-make-them-travel-the-world-using-html5-svg-canvas-and-javascript/
-    }
-
+		this.href = data;
+		this.download = "Cacholica.png";
+		console.log(data);
+		document.write('<img src="'+data+'"/>');
+	});
+	
 
 });

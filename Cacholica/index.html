@@ -8,98 +8,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
 	</head> 
+	
 	<body>
-	<div id="fb-root"></div>
-	<script>
-	var accessToken;
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '373013199568013',
-          xfbml      : true,
-          version    : 'v2.3'
-        });
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-	   
-	   function publishOnFacebook(x) {
-			
-			 FB.login(function(response) {
-			if (response.authResponse) {
-			 access_token =   FB.getAuthResponse()['accessToken'];
-			 console.log('Access Token = '+ access_token);
-			 FB.api('/me', function(response) { });
-			 try {
-				blob = dataURItoBlob(x);
-				} catch (e) {
-					console.log(e);
-				}
-			var fd = new FormData();
-			fd.append("access_token",   access_token       );
-			fd.append("source", blob);
-			fd.append("message", "Photo Text");
-			try {
-				$.ajax({
-					url: "https://graph.facebook.com/me/photos?access_token=" + access_token  ,
-					type: "POST",
-					data: fd,
-					processData: false,
-					contentType: false,
-					cache: false,
-					success: function (data) {
-						console.log("success " + data);
-						$("#poster").html("Posted Canvas Successfully");
-					},
-					error: function (shr, status, data) {
-						console.log("error " + data + " Status " + shr.status);
-					},
-					complete: function () {
-						console.log("API call completed");
-					}
-				});
-
-			} catch (e) {
-				console.log(e);
-			}
-			} else {
-			 console.log('User cancelled login or did not fully authorize.');
-			}
-			}, {scope: ''});
-	}
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-			 
-		
-			   	   
-			
-		
-		
-		
-		function dataURItoBlob(dataURI) {
-			var byteString = atob(dataURI.split(',')[1]);
-			var ab = new ArrayBuffer(byteString.length);
-			var ia = new Uint8Array(ab);
-			for (var i = 0; i < byteString.length; i++) {
-				ia[i] = byteString.charCodeAt(i);
-			}
-			return new Blob([ab], {
-				type: 'image/png'
-			});
-}
-
-    </script>
-	<div class="container">
+		<div class="container">
 		<div class="header">
 			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="navbar-header">
@@ -120,46 +31,24 @@
 				  </ul>
 				</div><!--/.nav-collapse -->
 			</nav><br ><br ><br >
-			<div class="row jumbotron"> 
-				<div class="col-md-12">
-					<h2><i> Where Engineering and Art Collide </i></h2>
-				</div>
-				<br ><br >
-				<div class="col-md-8">
-					<article><p> We are innovators for a more visual and technologically cool world. But just like all innovators we are constant students and full time tinkerers.
-						Look around and play with our projects! And please give feedback!
-					</p> <article>
-				</div>
-				<div class="col-md-4">
-					<img src="#" /> 
-				</div>
-			</div>
+
 		</div>
 		<div class="content">
 			<div class="col-md-12 ">
 				<!-- will set to height and width of canvas in javascript-->
 				<canvas  width="1000" height="1000" id="socialWall" >
 				</canvas> 
-				<button type="button" id="shareButton"">Share</button>
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-				</fb:login-button>
-			</div>
-
-
-
+				<button id="shareBtn"> Download & Share! </button>
 
 		</div>
 		
-		
-		
 	</div>
-
-	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-	</body> 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script> 
 	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
 	<script type="text/javascript" src="index.js"></script> 	
 	<script type="text/javascript" src="https://code.createjs.com/createjs-2014.12.12.min.js"></script> 	
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.5.0/fabric.js"></script> 	
 
+	</body> 
+	
 </html> 
